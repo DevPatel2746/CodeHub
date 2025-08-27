@@ -1,0 +1,98 @@
+/* Wrapper that holds navbar + main content */
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar container */
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 30px 15px 30px; /* 👈 add some top padding only */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* Username on left */
+.navbar-left {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Links on right */
+.navbar-right {
+  display: flex;
+  gap: 30px;
+}
+
+/* Link styles */
+.nav-link {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Hover underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Logout button */
+.nav-link.logout {
+  color: #ffdddd;
+  font-weight: bold;
+}
+
+/* Main content area below navbar */
+.dashboard-content {
+  width: 100%;
+  flex-grow: 1;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #cfe0f5, #e0f0ff);
+
+}
+
+
+/* Page title fallback */
+.page-title {
+  padding: 30px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Only apply top margin in Task page */
+.task-navbar {
+  /* margin-top: 1px; */
+}

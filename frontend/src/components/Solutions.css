@@ -1,0 +1,63 @@
+/* Main container - full width */
+.solutions-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f8ff; /* Light blue background */
+}
+
+/* Each solution card */
+.solution-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-left: 5px solid #b0d4f1; /* Light blue accent */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.solution-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Top section of the card */
+.solution-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Question text */
+.solution-question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Task type */
+.solution-type {
+  background-color: #e6f2ff;
+  color: #007acc;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Bottom section */
+.solution-bottom {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .solution-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

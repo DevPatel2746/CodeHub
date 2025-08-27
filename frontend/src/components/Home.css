@@ -1,0 +1,80 @@
+/* Container */
+.home-container {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  color: #f1f1f1;
+}
+
+/* Quote */
+.home-quote {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+
+/* Layout */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.home-left, .home-right {
+  background: #1f1f2b;
+  border: 1px solid #2a2a3a;
+  border-radius: 12px;
+  padding: 18px;
+  height: 300px;
+}
+
+/* Gauge */
+.gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gauge-svg {
+  width: 100%;
+  max-width: 420px;
+}
+.gauge-caption {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Bars */
+.bar-row + .bar-row {
+  margin-top: 18px;
+}
+.bar-label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.95;
+}
+.bar-label span {
+  font-weight: 500;
+  opacity: 0.8;
+}
+.bar-track {
+  height: 16px;
+  background: #2b2b3b;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+.bar-fill.fe { background: #2ecc71; }  /* green */
+.bar-fill.be { background: #f39c12; }  /* orange */
+.bar-fill.fs { background: #e74c3c; }  /* red */
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home-grid { grid-template-columns: 1fr; }
+}
